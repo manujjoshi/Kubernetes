@@ -1,3 +1,3 @@
 # Kubernetes
 ## Architecture
-![](https://phoenixnap.com/kb/wp-content/uploads/2021/04/full-kubernetes-model-architecture.png)
+![](https://techdozo.dev/wp-content/uploads/2021/07/K8-Architecture.png)
