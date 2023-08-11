@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: firstdeploy
+spec:
+  replicas: 3  ## deployment bydefault use replicaset
+  selector:
+    matchLabels:
+      app: webapp
+  template: 
+#   kind: Pod      (bydefault)
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: salesforecast
+          image: acraksdsteamrnd.azurecr.io/sales_forecasting:v1
+      imagePullSecrets:
+        - name: regcred

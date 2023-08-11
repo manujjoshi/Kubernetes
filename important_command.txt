@@ -1,0 +1,29 @@
+
+########################### Important commands (Imperative commands)
+
+
+1. To run a deployment directly: 
+   kubectl expose deployment salesforcast --type=LoadBalancer --port=8080
+
+2. To create deployment: 
+   kubectl create deployment sales_forecast --image=manujjoshi52/sales_forecasting
+
+3. Upscaling and downscaling:
+   kubectl scale deployment salesforecast --replicas=5
+
+4. update image in deployment:
+   kubectl set image deployment salesforecast sales-forecasting-rmf7q=rksht/ml-demo
+
+5. Check rollout status:
+   kubectl rollout status deployment salesforecast
+
+6. To Rollback deployment:
+   kubectl rollout undo deployment/salesforecast --to-revision=1
+
+7. Check Deployment history:
+   kubectl rollout history deployment salesforecast
+
+8. Persistent Volumes: Pod and Node independent
+
+9. kubectl cluster-info
+   

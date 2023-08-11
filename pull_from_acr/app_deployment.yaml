@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app-deployment
+  labels:
+    app: python-app
+    kind: deploy
+  namespace: ns-manuj
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-app
+      kind: pod  
+  template:
+    metadata:
+      labels:
+        app: python-app
+        kind: pod
+    spec:
+      containers:
+      - name: python-app-pod
+        image: acraksdsteamrnd.azurecr.io/sales_forecasting:v1
+        # ports:
+        #   - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
+

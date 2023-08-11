@@ -1,0 +1,20 @@
+
+## enter inside a pod: kubectl exec -it emptydir -- bash
+apiVersion: v1
+kind: Pod
+metadata:
+  name: emptydir
+spec:
+  containers:
+  - image: coolgourav147/nginx-custom
+    name: test-container
+    volumeMounts:
+      - mountPath: /data
+        name: first-volume
+
+  volumes:
+    - name: first-volume
+      hostPath:
+        path: /tmp/data   ## worker node path
+
+#### kubectl cluster-info

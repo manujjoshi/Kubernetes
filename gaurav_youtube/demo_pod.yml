@@ -1,0 +1,14 @@
+## multi container pods
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myfirstpod
+  labels:
+    env: prod
+spec:
+  containers:
+    - name: container1
+      image: coolgourav147/nginx-custom
+    # - name: container2
+    #   image: manujjoshi52/sales_forecasting

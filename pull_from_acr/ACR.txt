@@ -1,0 +1,6 @@
+
+######### Command to create secret for accessing ACR
+kubectl create secret docker-registry regcred --docker-server=acraksdsteamrnd.azurecr.io --docker-username=acrAksDsTeamRnD --docker-password=ld2npxjgEac7Y5+8oUCT3D16fgt2by/pB1rRfY2i2n+ACRCpM44O --docker-email=manujkumar.joshi@celebaltech.com
+
+########### Push image in ACR
+docker pull acr: docker push loginserver/manuj/image-name:version

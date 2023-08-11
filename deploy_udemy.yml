@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: firstdeploy
+spec:
+  replicas: 3  ## deployment bydefault use replicaset
+  selector:
+    matchLabels:
+      app: webapp
+  template: 
+#   kind: Pod      (bydefault)
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: salesforecast
+          image: manujjoshi52/sales_forecasting
+          imagePullPolicy: IfNotPresent
+      #     volumeMounts:
+      #       - mountPath: /app/story
+      #         name: vol1
+      #     # livenessProbe:
+      #     #   httpGet:
+      #     #     path: /
+      #     #     port: 8080
+      #     #   periodSeconds: 10
+      #       # initialDelaySeconds: 5
+      # volumes: 
+      #   - name: vol1
+      #     persistentVolumeClaim: 
+      #       claimName: host-pvc
+          

@@ -1,0 +1,14 @@
+
+## kubectl expose pod demopod --type=NodePort --port=8080 --target-port=80 --name firstservice
+## specify service for type, NodePort, LoadBalancer or ClusterIP(default)
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demopod
+  labels:
+    env: prod
+spec:
+  containers:
+    - name: container
+      image: coolgourav147/nginx-custom

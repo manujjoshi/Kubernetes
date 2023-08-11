@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: "http-pod"
+  labels: 
+    app: webserver
+spec: 
+  containers:
+    - name: "http-c1"
+      image: "manujjoshi52/sales_forecasting"    
+
+
