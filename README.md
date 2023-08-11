@@ -4,4 +4,4 @@
 [K8s by Nana](https://www.youtube.com/watch?v=X48VuDVv0do)
 ## Architecture
 ![](https://www.researchgate.net/publication/320248964/figure/fig1/AS:806205253484545@1569225719186/Kubernetes-architecture.png)
-![](https://techdozo.dev/wp-content/uploads/2021/07/K8-Architecture.png)
+
